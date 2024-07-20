@@ -8,7 +8,7 @@ Esta es una página web de un negocio de peluquería canina que pretende mostrar
 En cuanto a los modelos, la página busca mostrar los servicios que se ofrecen, los accesorios que se pueden adquirir y los profesionales que allí trabajan. Además al loguearse el daministrador se pueden ver los clientes con sus datos.
 
 # Video explicativo 🚀
-https://youtu.be/aWkONJ1-kVc
+https://youtu.be/FXEA-MS0Qgw
 
 # Usuario 
 username : superadmin
