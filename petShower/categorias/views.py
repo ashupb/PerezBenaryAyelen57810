@@ -103,7 +103,6 @@ def loginRequest(request):
         user = authenticate(request, username=usuario, password=clave)
         if user is not None:
             login(request, user)
-
             #_______ Buscar Avatar
             try:
                 avatar = Avatar.objects.get(user=request.user.id).imagen.url
@@ -111,7 +110,6 @@ def loginRequest(request):
                 avatar = "/media/avatares/default.png"
             finally:
                 request.session["avatar"] = avatar
-
             #______________________________________________________________
             return render(request, "categorias/index.html")
         else:

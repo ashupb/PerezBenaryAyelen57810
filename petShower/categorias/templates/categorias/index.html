@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <div>
-                    <a href="{% url 'agregarAvatar' %}"><img src="{{ request.session.avatar }}" height="40px" weight="40px" alt="mi foto"></a>
+                    <a href="{% url 'agregarAvatar' %}"><img src="{{ request.session.avatar }}" height="40px" weight="40px" alt=""></a>
                 </div>
                 <p style="color:white"> [{{user.first_name}} {{user.last_name}}] </p>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -65,7 +65,7 @@
                         <div class="text-center my-5">
                             {% block titulo %}
                             <h1 class="display-5 fw-bolder text-white mb-2">Bienvenidos a Pet Shower</h1>
-                            <p class="lead text-white-50 mb-4">Para que tu amigo de cuatro patas siempre luzca bien</p>
+                            <p class="lead fw-bolder text-white-50 mb-4">Para que tu amigo de cuatro patas siempre luzca bien</p>
                             {% endblock titulo %}
                         </div>
                     </div>
