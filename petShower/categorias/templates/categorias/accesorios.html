@@ -1,0 +1,32 @@
+{% extends "categorias/index.html" %}
+
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Accesorios</h1>
+<p class="lead text-white-50 mb-4">Podes adquirir los siguientes accesorios para tu mascota</p>                               
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for a in accesorios_list  %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.nombre }}</td>
+            <td>{{ a.valor }}</td> 
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

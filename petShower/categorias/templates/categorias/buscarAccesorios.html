@@ -1,0 +1,19 @@
+{% extends "categorias/index.html" %}
+
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Buscar Accesorios</h1>                                
+{% endblock titulo %}
+
+
+{% block contenido %}   
+
+<form action="{% url 'encontrarAccesorios' %}" method="get">
+    {% csrf_token %}
+    <table>
+        <p>Ingrese un patron de busqueda: <input type="text" name="buscar" id="buscar"></p>
+    </table>
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock contenido %}

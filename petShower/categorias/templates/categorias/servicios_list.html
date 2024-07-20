@@ -1,0 +1,60 @@
+{% extends "categorias/index.html" %}
+
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Servicios</h1>
+<p class="lead text-white-50 mb-4">Ofrecemos los siguientes servicios para tu mascota</p>                               
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <td width="200"><h2>Servicios</h2></td>
+        <td>
+            <a
+            href="{% url 'serviciosCreate' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>        
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Tamaño de mascota</th>
+            <th>Valor</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for s in servicios_list  %}
+        <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.nombre }}</td>
+            <td>{{ s.tamanio_mascota }}</td>
+            <td>{{ s.valor }}</td>
+            <td>
+                <a
+                  href="{% url 'serviciosUpdate' s.id %}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                  href="{% url 'serviciosDelete' s.id %}"
+                  class="btn btn-danger"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>                
+            </td>              
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

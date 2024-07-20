@@ -1,0 +1,35 @@
+{% extends "categorias/index.html" %}
+
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Servicios</h1>
+<p class="lead text-white-50 mb-4">Ofrecemos los siguientes servicios para tu mascota</p>                               
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Tamaño de mascota</th>
+            <th>Valor</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for s in servicios_list  %}
+        <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.nombre }}</td>
+            <td>{{ s.tamanio_mascota }}</td>
+            <td>{{ s.valor }}</td> 
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
